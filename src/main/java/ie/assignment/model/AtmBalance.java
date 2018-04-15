@@ -1,11 +1,11 @@
 package ie.assignment.model;
 
 public class AtmBalance {
-	private int five;
-	private int ten;
-	private int twenty;
 	private int fifty;
-
+	private int twenty;
+	private int ten;
+	private int five;
+	
 	public AtmBalance() {
 	}
 

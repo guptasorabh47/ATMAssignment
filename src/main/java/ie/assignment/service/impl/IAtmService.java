@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import ie.assignment.dao.AtmDao;
+import ie.assignment.exception.AccountDetailException;
 import ie.assignment.exception.AtmException;
 import ie.assignment.model.Account;
 import ie.assignment.model.Atm;
@@ -33,16 +34,16 @@ public class IAtmService implements AtmService {
 			return "Insufficient funds!";
 		}
 
-		logger.debug("Getting cash from ATM for the amount {}", amount);
+		logger.debug("Getting cash from ATM for the amount €{}", amount);
 		if (amount % 5 != 0) {
 			return "Withdrawals allowed in multiples of 5 only!";
 		}
 		Atm atm = atmDao.getTotalAmount();
 		if (amount > atm.getAmount()) {
-			return "No cash available!";
+			throw new AccountDetailException("No cash available!");
 		}
 
-		StringBuffer message = new StringBuffer("Please collect your cash...").append("\n");
+		StringBuffer message = new StringBuffer("Please collect your cash ").append("\n");
 
 		int requestedAmount = amount;
 		AtmBalance balance = atm.getBalance();
