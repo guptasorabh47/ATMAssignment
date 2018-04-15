@@ -5,7 +5,7 @@ This is Spring Boot application using REST endpoints.
 Notes :
 
 I have configure the serve port 9999. One can change by visiting the application.properties file.
-
+The application maintains the log in the application.log file.
 
 Steps to run the application
 
