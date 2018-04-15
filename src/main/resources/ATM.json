@@ -1,0 +1,9 @@
+{
+   "balance":{
+      "fifty":20,
+      "twenty":30,
+      "ten":30,
+      "five":20
+   },
+   "amount":2000
+}

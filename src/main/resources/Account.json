@@ -1,0 +1,14 @@
+[
+   {
+      "accountNumber":"123456789",
+      "password":1234,
+      "amount":800,
+      "overDraft":200
+   },
+   {
+      "accountNumber":"987654321",
+      "password":4321,
+      "amount":1230,
+      "overDraft":150
+   }
+]
