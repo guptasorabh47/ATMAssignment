@@ -13,7 +13,7 @@ import ie.assignment.service.impl.IAccountService;
 import ie.assignment.service.impl.IAtmService;
 import ie.assignment.validator.AccountValidator;
 import ie.assignment.validator.impl.IAccountValidator;
-
+// sample
 @Configuration
 public class AtmConfig {
 
